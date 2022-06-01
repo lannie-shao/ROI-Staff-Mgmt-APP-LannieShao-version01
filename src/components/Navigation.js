@@ -16,10 +16,10 @@ function MyTabs() {
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
 
-          if (route.name === 'Welcome') {
+          if (route.name === 'Home Page') {
             iconName = focused ? 'home' : 'home-outline';
           }
-          if (route.name === 'People') {
+          if (route.name === 'People List') {
             iconName = focused ? 'person' : 'person-outline';
           }
           if (route.name === 'Add Person') {
@@ -28,9 +28,8 @@ function MyTabs() {
           if (route.name === 'Department') {
             iconName = focused ? 'business' : 'business-outline';
           }
-
           // You can return any component that you like here!
-          // return <Ionicons name={iconName} size={size} color={color} />;
+          // return <Ion-icons name={iconName} size={size} color={color} />;
           return <Ionicons name={iconName} size={20} color={color} />;
         },
         tabBarActiveTintColor: 'tomato',
@@ -40,8 +39,8 @@ function MyTabs() {
       activeColor="#800000"
       inactiveColor="#3e2465"
       barStyle={{backgroundColor: '#cccccc'}}>
-      <Tab.Screen name="Home" component={LandingPage} />
-      <Tab.Screen name="People" component={PeopleList} />
+      <Tab.Screen name="Home Page" component={LandingPage} />
+      <Tab.Screen name="People List" component={PeopleList} />
       <Tab.Screen name="Add Person" component={AddPerson} />
       <Tab.Screen name="Department" component={CompanyList} />
     </Tab.Navigator>
